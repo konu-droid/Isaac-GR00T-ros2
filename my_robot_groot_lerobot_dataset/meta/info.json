@@ -1,0 +1,112 @@
+{
+    "codebase_version": "v2.1",
+    "robot_type": "so100",
+    "total_episodes": 1,
+    "total_frames": 502,
+    "total_tasks": 2,
+    "total_videos": 1,
+    "total_chunks": 1,
+    "chunks_size": 502,
+    "fps": 38.33,
+    "splits": {
+        "train": "0:1"
+    },
+    "data_path": "data/chunk-{episode_chunk:03d}/episode_{episode_index:06d}.parquet",
+    "video_path": "videos/chunk-{episode_chunk:03d}/{video_key}/episode_{episode_index:06d}.mp4",
+    "features": {
+        "action": {
+            "dtype": "float32",
+            "shape": [
+                7
+            ],
+            "names": [
+                "cmd_joint1",
+                "cmd_joint2",
+                "cmd_joint3",
+                "cmd_joint4",
+                "cmd_joint5",
+                "cmd_joint6",
+                "cmd_gripper"
+            ]
+        },
+        "observation.state": {
+            "dtype": "float32",
+            "shape": [
+                6
+            ],
+            "names": [
+                "state_0",
+                "state_1",
+                "state_2",
+                "state_3",
+                "state_4",
+                "state_5"
+            ]
+        },
+        "observation.images.webcam": {
+            "dtype": "video",
+            "shape": [
+                720,
+                1280,
+                3
+            ],
+            "names": [
+                "height",
+                "width",
+                "channels"
+            ],
+            "info": {
+                "video.fps": 38.33,
+                "video.height": 720,
+                "video.width": 1280,
+                "video.channels": 3,
+                "video.codec": "h264",
+                "video.pix_fmt": "yuv420p",
+                "video.is_depth_map": false,
+                "has_audio": false
+            }
+        },
+        "timestamp": {
+            "dtype": "float32",
+            "shape": [
+                1
+            ],
+            "names": null
+        },
+        "frame_index": {
+            "dtype": "int64",
+            "shape": [
+                1
+            ],
+            "names": null
+        },
+        "episode_index": {
+            "dtype": "int64",
+            "shape": [
+                1
+            ],
+            "names": null
+        },
+        "index": {
+            "dtype": "int64",
+            "shape": [
+                1
+            ],
+            "names": null
+        },
+        "task_index": {
+            "dtype": "int64",
+            "shape": [
+                1
+            ],
+            "names": null
+        },
+        "annotation.human.validity": {
+            "dtype": "int64",
+            "shape": [
+                1
+            ],
+            "names": null
+        }
+    }
+}
