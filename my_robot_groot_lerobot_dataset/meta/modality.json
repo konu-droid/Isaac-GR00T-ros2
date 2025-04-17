@@ -1,24 +1,11 @@
 {
     "state": {
-        "arm_joints": {
+        "joints": {
             "start": 0,
-            "end": 5
-        },
-        "gripper": {
-            "start": 5,
             "end": 6
         }
     },
-    "action": {
-        "arm_command": {
-            "start": 0,
-            "end": 6
-        },
-        "gripper_command": {
-            "start": 6,
-            "end": 7
-        }
-    },
+    "action": {},
     "video": {
         "webcam": {
             "original_key": "observation.images.webcam"
@@ -27,7 +14,6 @@
     "annotation": {
         "human.task_description": {
             "original_key": "task_index"
-        },
-        "human.validity": {}
+        }
     }
 }
