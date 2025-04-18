@@ -1,11 +1,24 @@
 {
     "state": {
-        "joints": {
+        "single_arm": {
             "start": 0,
+            "end": 5
+        },
+        "gripper": {
+            "start": 5,
             "end": 6
         }
     },
-    "action": {},
+    "action": {
+        "single_arm": {
+            "start": 0,
+            "end": 5
+        },
+        "gripper": {
+            "start": 5,
+            "end": 6
+        }
+    },
     "video": {
         "webcam": {
             "original_key": "observation.images.webcam"

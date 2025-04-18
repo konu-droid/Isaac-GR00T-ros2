@@ -2,18 +2,32 @@
     "codebase_version": "v2.1",
     "robot_type": "so100",
     "total_episodes": 1,
-    "total_frames": 502,
+    "total_frames": 433,
     "total_tasks": 2,
     "total_videos": 1,
     "total_chunks": 1,
-    "chunks_size": 502,
-    "fps": 38.33,
+    "chunks_size": 433,
+    "fps": 38.19,
     "splits": {
         "train": "0:1"
     },
     "data_path": "data/chunk-{episode_chunk:03d}/episode_{episode_index:06d}.parquet",
     "video_path": "videos/chunk-{episode_chunk:03d}/{video_key}/episode_{episode_index:06d}.mp4",
     "features": {
+        "action": {
+            "dtype": "float32",
+            "shape": [
+                6
+            ],
+            "names": [
+                "Shoulder_Rotation",
+                "Shoulder_Pitch",
+                "Elbow",
+                "Wrist_Pitch",
+                "Wrist_Roll",
+                "Gripper"
+            ]
+        },
         "observation.state": {
             "dtype": "float32",
             "shape": [
@@ -41,7 +55,7 @@
                 "channels"
             ],
             "info": {
-                "video.fps": 38.33,
+                "video.fps": 38.19,
                 "video.height": 720,
                 "video.width": 1280,
                 "video.channels": 3,
